@@ -34,7 +34,8 @@ export default class Owners extends Component {
   };
 
   componentDidMount() {
-    this.loadowners();
+    this.getOwners();
+    //this.loadowners();
     this.state ={loaded:false}
   }
 
@@ -71,7 +72,7 @@ export default class Owners extends Component {
   deleteOwner = (id) => {
     API.deleteOwner(id)
     .then((res) => {
-      this.loadowners()
+      //this.loadowners()
     })
     .catch(err => console.log(err));
   }
